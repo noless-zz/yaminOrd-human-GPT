@@ -1,0 +1,198 @@
+body {
+    background: #f9fafc;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+    padding: 36px 32px 32px 32px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #2563eb;
+    margin-bottom: 8px;
+    text-align: right;
+}
+
+.instructions {
+    color: #374151;
+    font-size: 1.07em;
+    margin-bottom: 18px;
+    text-align: right;
+}
+
+.input-section {
+    margin-bottom: 18px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#startWord {
+    flex: 1;
+    padding: 7px 11px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #b6b6c0;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+#startWordSelect {
+    padding: 7px 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #b6b6c0;
+    background: #f1f5f9;
+    min-width: 160px;
+    box-sizing: border-box;
+}
+
+.sentence-section {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.sentence {
+    min-height: 30px;
+    font-size: 1.22em;
+    color: #111827;
+    padding: 7px 0 0 0;
+    text-align: right;
+    margin-bottom: 2px;
+    word-break: break-word;
+}
+
+.cumulative-prob {
+    font-size: 1.06em;
+    margin-bottom: 8px;
+    margin-top: 2px;
+    text-align: right;
+    min-height: 26px;
+    font-weight: bold;
+}
+
+/* צבע/רקע דינמי לערכי הסתברות */
+.prob-colored {
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 2px 10px;
+    margin: 0 2px;
+    color: #222;
+    box-shadow: 0 1px 2px #ccc1;
+    border: 1px solid #e5e7eb;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* גוונים חזקים לגיבוי (אם תרצה להוסיף בכח) */
+
+.prob-colored.prob-high   { background: #43ea6d; color: #182d17; }/*
+.prob-colored.prob-mid    { background: #ffe66d; color: #665c00; }
+.prob-colored.prob-low    { background: #ff7575; color: #421010; }
+*/
+
+.options-section {
+    margin-bottom: 18px;
+    text-align: right;
+    overflow-x: auto;
+}
+
+.word-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    background: #f3f4f6;
+    direction: rtl;
+    table-layout: auto;
+}
+
+.word-table th, .word-table td {
+    padding: 10px 6px;
+    border: 1px solid #d1d5db;
+    text-align: center;
+    font-size: 1.07em;
+    white-space: nowrap;
+}
+
+.word-table th {
+    background: #e0e7ff;
+    color: #3730a3;
+    font-weight: bold;
+}
+
+.word-select-btn {
+    background: #e0e7ff;
+    color: #3730a3;
+    border: none;
+    border-radius: 7px;
+    font-size: 1em;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: background 0.14s;
+}
+
+.word-select-btn:hover {
+    background: #a5b4fc;
+}
+
+.reset-btn {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.14s;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.reset-btn:hover {
+    background: #b91c1c;
+}
+
+.end-message {
+    font-size: 1.16em;
+    color: #059669;
+    margin-top: 12px;
+    min-height: 26px;
+    text-align: right;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+@media (max-width: 700px) {
+    .game-container {
+        max-width: 98vw;
+        padding: 12px 4vw 20px 4vw;
+    }
+    .word-table th, .word-table td {
+        padding: 7px 2px;
+        font-size: 0.95em;
+    }
+    .sentence {
+        font-size: 1em;
+    }
+    .reset-btn {
+        font-size: 0.95em;
+        padding: 7px 8px;
+    }
+    #startWord, #startWordSelect {
+        font-size: 0.95em;
+        padding: 6px 7px;
+    }
+}
